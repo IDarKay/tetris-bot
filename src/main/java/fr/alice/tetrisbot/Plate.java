@@ -36,11 +36,14 @@ public class Plate extends JPanel implements PlateRender
     };
 
     private static final Color[] overlayColors = new Color[] {
+            new Color(255, 0, 0, 100),
             new Color(0, 255, 255, 100),
             new Color(255, 255, 0, 100),
             new Color(170, 0, 255, 100),
             new Color(255, 165, 0, 100),
             new Color(0, 0, 255, 100),
+            new Color(123, 210, 132, 100),
+            new Color(117, 79, 65, 100)
     };
 
     private byte [][] b;

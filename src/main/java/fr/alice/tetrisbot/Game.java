@@ -119,7 +119,9 @@ public class Game implements KeyListener
 
     private void tick(ActionEvent e)
     {
-        if (end || pause) return;
+        if (end || pause) {
+            return;
+        };
         if (this.currentPiece != null) {
             if (this.currentPiece.checkCollision(this.board, DIRECTION.DOWN)) {
                 this.fixPiece();
@@ -246,8 +248,8 @@ public class Game implements KeyListener
                 0b1100_0100_0100_0000
         });
 
-        public byte id;
-        private char[] shapes;
+        public final byte id;
+        public final char[] shapes;
 
         PIECE_TYPE(byte id, char[] shapes) {
             this.shapes = shapes;
@@ -303,6 +305,10 @@ public class Game implements KeyListener
             this.y = y;
             this.type = type;
             this.rot = rot;
+        }
+
+        public PIECE_TYPE getType() {
+            return type;
         }
 
         public boolean checkCollision(byte[][] grid) {

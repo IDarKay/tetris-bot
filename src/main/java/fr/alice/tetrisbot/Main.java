@@ -20,6 +20,7 @@ public class Main
         Game game = new Game(win.plate, win.preview);
         Bot bot = new Bot(game, win.plate);
         win.addKeyListener(game);
+        win.addKeyListener(bot);
         win.setVisible(true);
         game.start();
     }

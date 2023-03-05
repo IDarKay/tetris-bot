@@ -1,8 +1,6 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
-group 'org.example'
+group 'fr.alice.tetrisbot'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -16,4 +14,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+jar {
+    baseName = "tetris-bot"
+    version = "0.1.0"
+    manifest {
+        attributes 'Main-Class': 'fr.alice.tetrisbot.Main'
+    }
 }

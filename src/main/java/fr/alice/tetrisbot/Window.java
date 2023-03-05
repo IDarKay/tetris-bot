@@ -19,7 +19,7 @@ public class Window extends JFrame
 
     private final JPanel content = new JPanel();
     public final Plate plate = new Plate(10, 22);
-    public final Plate preview = new Plate(4, 4);
+    public final Plate preview = new Plate(4, 6);
 
     /**
      * init windows
